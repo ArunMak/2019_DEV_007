@@ -15,10 +15,13 @@ class BerlinClockVC: UIViewController {
     
     // MARK: Instance variable
     private var datePicker : UIDatePicker!
+    private var presenter: BerlinClockPresenter?
+
    
     // MARK: Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter = BerlinClockPresenter(delegate: self)
         convertButton.isHidden = true
         addPicker()
         // Do any additional setup after loading the view, typically from a nib.
@@ -102,12 +105,43 @@ class BerlinClockVC: UIViewController {
                 button.backgroundColor = UIColor(red: 175, green: 44, blue: 37)
             }
         }
+         self.presenter?.getDigitalTime(time: digitalTextField.text!, tag: sender.tag)
     }
    
     // MARK: Convert button action
     //Convert to berlin time through digital time input
     @IBAction func convertButtonAction(_ sender: Any) {
-        
+        self.presenter?.getBerlinTime(seconds: secondsTextField.text!, hoursLineOne: hourLineOneTextField.text!, hoursLineTwo: hourLineTwoTextField.text!, minutesLineOne: minuteLineOneTextField.text!, minutesLineTwo: minuteLineTwoTextField.text!)
     }
 }
+extension BerlinClockVC: BerlinClockView {
+    // MARK: Conversion View Delegate Methods
+    func showBerlinTime(time: Berlin) {
+        let berlinObj: Berlin =  time
+        self.outputLabel.text = " "
+        switch berlinObj.tagValue {
+        case 4:
+            self.outputLabel.text = " \(berlinObj.seconds) "
+        case 5:
+            self.outputLabel.text = " \(berlinObj.hoursLineOne)"
+        case 6:
+            self.outputLabel.text = " \(berlinObj.hoursLineTwo)"
+        case 7:
+            self.outputLabel.text = " \(berlinObj.minutesLineOne)"
+        case 8:
+            self.outputLabel.text = " \(berlinObj.minutesLineTwo) "
+        case 9:
+            self.outputLabel.text = " \(berlinObj.seconds)\(berlinObj.hoursLineOne)\(berlinObj.hoursLineTwo)\(berlinObj.minutesLineOne)\(berlinObj.minutesLineTwo)"
+        default:
+            self.outputLabel.text = " \(berlinObj.seconds)\(berlinObj.hoursLineOne)\(berlinObj.hoursLineTwo)\(berlinObj.minutesLineOne)\(berlinObj.minutesLineTwo)"
+        }
+    }
+    func showDigitalTime(time: String) {
+        self.outputLabel.text = time
+    }
+    func showErrorMessage(message: String) {
+        BerlinClockUtils.showAlert(message: message, vc: self)
+    }
+}
+
 
