@@ -53,6 +53,27 @@ class BerlinClockPresenterTests: XCTestCase {
         conversionPresenter.getBerlinTime(seconds: "Y",hoursLineOne: "RRRR", hoursLineTwo: "ROOO", minutesLineOne: "YYRYYRYYRYY", minutesLineTwo: "" )
         wait(for: [expec], timeout: 3)
     }
+    func testBerlinHourValue(){
+        let expec = expectation(description: "Get Berlin Hour Value ")
+        let testBerlinClockView = MockUIGetBerlinHourView(expectation: expec)
+        let conversionPresenter = BerlinClockPresenter(delegate:testBerlinClockView)
+        conversionPresenter.getDigitalTime(time: "20:23:04", tag: 2 )
+        wait(for: [expec], timeout: 10)
+    }
+    func testBerlinMinLineOneValue(){
+        let expec = expectation(description: "Get Berlin Line One Min Value ")
+        let testBerlinClockView = MockUIGetBerlinMinView(expectation: expec)
+        let conversionPresenter = BerlinClockPresenter(delegate:testBerlinClockView)
+        conversionPresenter.getDigitalTime(time: "20:59:04", tag: 2 )
+        wait(for: [expec], timeout: 10)
+    }
+    func testGetDigitalTimeValue(){
+        let expec = expectation(description: "Get Digital Time Value ")
+        let testBerlinClockView = MockUIGetDigitalTimeView(expectation: expec)
+        let conversionPresenter = BerlinClockPresenter(delegate:testBerlinClockView)
+        conversionPresenter.getBerlinTime(seconds: "Y", hoursLineOne: "RRRR", hoursLineTwo: "OOOO", minutesLineOne: "YYRYYRYYRYO", minutesLineTwo: "YYYY")
+        wait(for: [expec], timeout: 10)
+    }
     
 }
 
@@ -127,6 +148,46 @@ class MockUIEmptyMinLineTwoView: BerlinClockView {
         XCTAssertEqual(message, "MinutesLineTwo is empty or less than 4 elements")
         self.expec.fulfill()
     }
+}
+class MockUIGetBerlinHourView: BerlinClockView {
+    var expec: XCTestExpectation
+    init(expectation: XCTestExpectation) {
+        self.expec = expectation
+    }
+    func showBerlinTime(time: Berlin){
+        print(time)
+        XCTAssertEqual(time.hoursLineOne, "RRRR")
+        self.expec.fulfill()
+    }
+    func showDigitalTime(time: String){}
+    func showErrorMessage(message: String ) {}
+}
+
+class MockUIGetBerlinMinView: BerlinClockView {
+    var expec: XCTestExpectation
+    init(expectation: XCTestExpectation) {
+        self.expec = expectation
+    }
+    func showBerlinTime(time: Berlin){
+        XCTAssertEqual(time.minutesLineOne, "YYRYYRYYRYY")
+        self.expec.fulfill()
+    }
+    func showDigitalTime(time: String){}
+    func showErrorMessage(message: String ) {}
+}
+
+
+class MockUIGetDigitalTimeView: BerlinClockView {
+    var expec: XCTestExpectation
+    init(expectation: XCTestExpectation) {
+        self.expec = expectation
+    }
+    func showBerlinTime(time: Berlin){}
+    func showDigitalTime(time: String){
+        XCTAssertEqual(String(time.prefix(5)), "20:54")
+        self.expec.fulfill()
+    }
+    func showErrorMessage(message: String ) {}
 }
 
 
