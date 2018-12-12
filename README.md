@@ -8,10 +8,10 @@ The next two rows represent hours. The upper row represents 5 hour blocks and is
 The final two rows represent the minutes. The upper row represents 5 minute blocks, and is made up of 11 lamps- every third lamp is red, the rest are yellow. The bottom row represents 1 minute blocks, and is made up of 4 yellow lamps.
 
 ## Support
-Architecture: MVP (Model-View-Presenter) + Data Services
-Xcode 9.2
-Support iOS 10+
-Swift 4
+-Architecture: MVP (Model-View-Presenter)
+-Xcode 9.2
+-Support iOS 10+
+-Swift 4
 
 
 ## ABOUT MVP
@@ -26,6 +26,7 @@ This Project is built with Xcode version 9.2 and Swift 4.0 and with a deployment
 
 Presenter :
 Protocol as a bridge to connect 2 classes (presenter and ViewController)
+
 protocol BerlinClockView {
 func showBerlinTime(time: Berlin)
 func showDigitalTime(time: String)
@@ -35,6 +36,7 @@ func showErrorMessage(message: String )
 Use extentions to manage protocol implementations :
 extension BerlinClockVC: BerlinClockView {
 // MARK: Conversion View Delegate Methods
+
 func showBerlinTime(time: Berlin) {}
 }
 func showDigitalTime(time: String) {
