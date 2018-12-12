@@ -76,16 +76,15 @@ class BerlinClockVC: UIViewController {
                 button.backgroundColor = UIColor(red: 175, green: 44, blue: 37)
             }
         }
+        outputLabel.text = " "
         if sender.tag == 2 {
             convertButton.isHidden = true
             digitalView.isHidden = false
             berlinClockView.isHidden = true
-            
         }else{
             convertButton.isHidden = false
             digitalView.isHidden = true
             berlinClockView.isHidden = false
-            
         }
     }
     func clearField(){
@@ -105,7 +104,7 @@ class BerlinClockVC: UIViewController {
                 button.backgroundColor = UIColor(red: 175, green: 44, blue: 37)
             }
         }
-         self.presenter?.getDigitalTime(time: digitalTextField.text!, tag: sender.tag)
+        self.presenter?.getDigitalTime(time: digitalTextField.text!, tag: sender.tag)
     }
    
     // MARK: Convert button action

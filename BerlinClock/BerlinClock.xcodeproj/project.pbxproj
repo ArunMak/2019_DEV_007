@@ -20,6 +20,7 @@
 		B6F26C7321C16B3D0098CAD4 /* BerlinClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */; };
 		B6F26C7621C16B500098CAD4 /* Berlin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7521C16B4F0098CAD4 /* Berlin.swift */; };
 		B6F26C7B21C1709A0098CAD4 /* BerlinClockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7A21C1709A0098CAD4 /* BerlinClockPresenter.swift */; };
+		B6F26C7E21C17E320098CAD4 /* BerlinClockUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7D21C17E320098CAD4 /* BerlinClockUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
 		B6F26C7521C16B4F0098CAD4 /* Berlin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Berlin.swift; sourceTree = "<group>"; };
 		B6F26C7A21C1709A0098CAD4 /* BerlinClockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockPresenter.swift; sourceTree = "<group>"; };
+		B6F26C7D21C17E320098CAD4 /* BerlinClockUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		B6F26C4621C158E00098CAD4 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				B6F26C7C21C17E230098CAD4 /* Utils */,
 				B6F26C7921C170810098CAD4 /* Presenter */,
 				B6F26C7421C16B450098CAD4 /* Model */,
 				B6F26C6821C15CD00098CAD4 /* Controller */,
@@ -147,6 +150,14 @@
 				B6F26C7A21C1709A0098CAD4 /* BerlinClockPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B6F26C7C21C17E230098CAD4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6F26C7D21C17E320098CAD4 /* BerlinClockUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 			files = (
 				B6F26C7B21C1709A0098CAD4 /* BerlinClockPresenter.swift in Sources */,
 				B6F26C4A21C158E10098CAD4 /* BerlinClockVC.swift in Sources */,
+				B6F26C7E21C17E320098CAD4 /* BerlinClockUtils.swift in Sources */,
 				B6F26C6D21C15CF80098CAD4 /* BerlinClockCustomString.swift in Sources */,
 				B6F26C4821C158E00098CAD4 /* AppDelegate.swift in Sources */,
 				B6F26C7621C16B500098CAD4 /* Berlin.swift in Sources */,
