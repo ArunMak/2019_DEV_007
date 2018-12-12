@@ -13,7 +13,7 @@
         <!--Berlin ClockVC-->
         <scene sceneID="WjH-z2-pEM">
             <objects>
-                <viewController id="We8-hJ-tns" customClass="BerlinClockVC" sceneMemberID="viewController">
+                <viewController id="We8-hJ-tns" customClass="BerlinClockVC" customModule="BerlinClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cFE-7f-kcg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
