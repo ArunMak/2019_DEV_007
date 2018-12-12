@@ -27,9 +27,10 @@ class BerlinClockPresenter {
     func getHoursAndMinLineOne(hours: Int, value: String, lampsCount: Int) -> String {
         let rest = hours / 5;
         if  lampsCount == 11 {
-            return getCharacterSequence(number: rest, lamps: lampsCount, symbol: value);
+           return getCharacterSequence(number: rest, lamps: lampsCount, symbol: value).replacingOccurrences(of: "YYY", with: "YYR" );
         }else{
-            return getCharacterSequence(number: rest, lamps: lampsCount, symbol: value).replacingOccurrences(of: "YYY", with: "YYR" );
+            return getCharacterSequence(number: rest, lamps: lampsCount, symbol: value);
+            
         }
     }
     func getHoursAndMinLineTwo(hours: Int, value: String) -> String {
@@ -133,7 +134,7 @@ class BerlinClockPresenter {
         var hours = 0
         for char in hour.uppercased() {
             if (char == character){
-                hours += 5
+                hours += count
             }
         }
         return hours
