@@ -52,7 +52,7 @@ class BerlinClockPresenter {
     // MARK: Get Digital Output from Berlin input
     func getBerlinTime(seconds: String,hoursLineOne: String, hoursLineTwo: String, minutesLineOne: String, minutesLineTwo: String ){
         if ( evaluateHoursAndMin(value: hoursLineOne, name: "HoursLineOne", limit: 4) &&  evaluateHoursAndMin(value: hoursLineTwo, name: "HoursLineTwo", limit: 4) && evaluateminuteLineOne(value:  minutesLineOne ) && evaluateHoursAndMin(value: minutesLineTwo, name: "MinutesLineTwo", limit: 4 )  &&  evaluateEmptyField(fieldText: seconds, fieldLimit: 1, fieldName: "Seconds") ){
-            delegate.showDigitalTime(time: String(format: "%02d:%02d:%02d", convertBerlinHourAndMinute(hour: hoursLineOne, character: "R", count: 5) + convertBerlinHourAndMinute(hour: hoursLineTwo,character: "R", count: 1 )  , convertBerlinMinuteLineOne(minutes: minutesLineOne) + convertBerlinHourAndMinute(hour: hoursLineTwo,character: "Y", count: 1) , convertBerlinSeconds(seconds: seconds)))
+            delegate.showDigitalTime(time: String(format: "%02d:%02d:%02d", convertBerlinHourAndMinute(hour: hoursLineOne, character: "R", count: 5) + convertBerlinHourAndMinute(hour: hoursLineTwo,character: "R", count: 1 )  , convertBerlinMinuteLineOne(minutes: minutesLineOne) + convertBerlinHourAndMinute(hour: minutesLineTwo,character: "Y", count: 1) , convertBerlinSeconds(seconds: seconds)))
             
         }
     }
