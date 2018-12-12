@@ -17,6 +17,8 @@
 		B6F26C6E21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C6B21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift */; };
 		B6F26C6F21C15CF80098CAD4 /* BerlinClockCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C6C21C15CF80098CAD4 /* BerlinClockCustomTextField.swift */; };
 		B6F26C7121C165C40098CAD4 /* BerlinClockCustomRGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7021C165C40098CAD4 /* BerlinClockCustomRGBColor.swift */; };
+		B6F26C7321C16B3D0098CAD4 /* BerlinClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */; };
+		B6F26C7621C16B500098CAD4 /* Berlin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7521C16B4F0098CAD4 /* Berlin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		B6F26C6B21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockMaxTextFieldLength.swift; sourceTree = "<group>"; };
 		B6F26C6C21C15CF80098CAD4 /* BerlinClockCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockCustomTextField.swift; sourceTree = "<group>"; };
 		B6F26C7021C165C40098CAD4 /* BerlinClockCustomRGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockCustomRGBColor.swift; sourceTree = "<group>"; };
+		B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
+		B6F26C7521C16B4F0098CAD4 /* Berlin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Berlin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		B6F26C4621C158E00098CAD4 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				B6F26C7421C16B450098CAD4 /* Model */,
 				B6F26C6821C15CD00098CAD4 /* Controller */,
 				B6F26C6721C15CCA0098CAD4 /* View */,
 				B6F26C4721C158E00098CAD4 /* AppDelegate.swift */,
@@ -108,6 +113,7 @@
 		B6F26C6721C15CCA0098CAD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */,
 				B6F26C7021C165C40098CAD4 /* BerlinClockCustomRGBColor.swift */,
 				B6F26C6A21C15CF70098CAD4 /* BerlinClockCustomString.swift */,
 				B6F26C6C21C15CF80098CAD4 /* BerlinClockCustomTextField.swift */,
@@ -122,6 +128,14 @@
 				B6F26C4921C158E10098CAD4 /* BerlinClockVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B6F26C7421C16B450098CAD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6F26C7521C16B4F0098CAD4 /* Berlin.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +244,11 @@
 				B6F26C4A21C158E10098CAD4 /* BerlinClockVC.swift in Sources */,
 				B6F26C6D21C15CF80098CAD4 /* BerlinClockCustomString.swift in Sources */,
 				B6F26C4821C158E00098CAD4 /* AppDelegate.swift in Sources */,
+				B6F26C7621C16B500098CAD4 /* Berlin.swift in Sources */,
 				B6F26C7121C165C40098CAD4 /* BerlinClockCustomRGBColor.swift in Sources */,
 				B6F26C6E21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift in Sources */,
 				B6F26C6F21C15CF80098CAD4 /* BerlinClockCustomTextField.swift in Sources */,
+				B6F26C7321C16B3D0098CAD4 /* BerlinClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
