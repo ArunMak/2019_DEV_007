@@ -12,13 +12,14 @@
 		B6F26C4D21C158E10098CAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F26C4B21C158E10098CAD4 /* Main.storyboard */; };
 		B6F26C4F21C158E20098CAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F26C4E21C158E20098CAD4 /* Assets.xcassets */; };
 		B6F26C5221C158E30098CAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F26C5021C158E30098CAD4 /* LaunchScreen.storyboard */; };
-		B6F26C5D21C158E60098CAD4 /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C5C21C158E60098CAD4 /* BerlinClockTests.swift */; };
+		B6F26C5D21C158E60098CAD4 /* BerlinClockPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C5C21C158E60098CAD4 /* BerlinClockPresenterTests.swift */; };
 		B6F26C6D21C15CF80098CAD4 /* BerlinClockCustomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C6A21C15CF70098CAD4 /* BerlinClockCustomString.swift */; };
 		B6F26C6E21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C6B21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift */; };
 		B6F26C6F21C15CF80098CAD4 /* BerlinClockCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C6C21C15CF80098CAD4 /* BerlinClockCustomTextField.swift */; };
 		B6F26C7121C165C40098CAD4 /* BerlinClockCustomRGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7021C165C40098CAD4 /* BerlinClockCustomRGBColor.swift */; };
 		B6F26C7321C16B3D0098CAD4 /* BerlinClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */; };
 		B6F26C7621C16B500098CAD4 /* Berlin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7521C16B4F0098CAD4 /* Berlin.swift */; };
+		B6F26C7B21C1709A0098CAD4 /* BerlinClockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F26C7A21C1709A0098CAD4 /* BerlinClockPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 		B6F26C5121C158E30098CAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6F26C5321C158E30098CAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F26C5821C158E60098CAD4 /* BerlinClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6F26C5C21C158E60098CAD4 /* BerlinClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTests.swift; sourceTree = "<group>"; };
+		B6F26C5C21C158E60098CAD4 /* BerlinClockPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockPresenterTests.swift; sourceTree = "<group>"; };
 		B6F26C5E21C158E60098CAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F26C6A21C15CF70098CAD4 /* BerlinClockCustomString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockCustomString.swift; sourceTree = "<group>"; };
 		B6F26C6B21C15CF80098CAD4 /* BerlinClockMaxTextFieldLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockMaxTextFieldLength.swift; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		B6F26C7021C165C40098CAD4 /* BerlinClockCustomRGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockCustomRGBColor.swift; sourceTree = "<group>"; };
 		B6F26C7221C16B3C0098CAD4 /* BerlinClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
 		B6F26C7521C16B4F0098CAD4 /* Berlin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Berlin.swift; sourceTree = "<group>"; };
+		B6F26C7A21C1709A0098CAD4 /* BerlinClockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerlinClockPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		B6F26C4621C158E00098CAD4 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				B6F26C7921C170810098CAD4 /* Presenter */,
 				B6F26C7421C16B450098CAD4 /* Model */,
 				B6F26C6821C15CD00098CAD4 /* Controller */,
 				B6F26C6721C15CCA0098CAD4 /* View */,
@@ -104,7 +107,7 @@
 		B6F26C5B21C158E60098CAD4 /* BerlinClockTests */ = {
 			isa = PBXGroup;
 			children = (
-				B6F26C5C21C158E60098CAD4 /* BerlinClockTests.swift */,
+				B6F26C5C21C158E60098CAD4 /* BerlinClockPresenterTests.swift */,
 				B6F26C5E21C158E60098CAD4 /* Info.plist */,
 			);
 			path = BerlinClockTests;
@@ -136,6 +139,14 @@
 				B6F26C7521C16B4F0098CAD4 /* Berlin.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B6F26C7921C170810098CAD4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B6F26C7A21C1709A0098CAD4 /* BerlinClockPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F26C7B21C1709A0098CAD4 /* BerlinClockPresenter.swift in Sources */,
 				B6F26C4A21C158E10098CAD4 /* BerlinClockVC.swift in Sources */,
 				B6F26C6D21C15CF80098CAD4 /* BerlinClockCustomString.swift in Sources */,
 				B6F26C4821C158E00098CAD4 /* AppDelegate.swift in Sources */,
@@ -256,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F26C5D21C158E60098CAD4 /* BerlinClockTests.swift in Sources */,
+				B6F26C5D21C158E60098CAD4 /* BerlinClockPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
